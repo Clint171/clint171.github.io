@@ -1,0 +1,88 @@
+/*I like dark theme ;)*/
+body{
+    background-color: #222;
+    color: #f2f2f2;
+    background-image: url("annie-spratt-gM8igOIP5MA-unsplash.jpg");
+}
+
+div{
+  background-color: hsla(0, 0%, 13%, 0.2);
+  /* border: 2px solid #2800d8; */
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+    border-top: 10px solid hsla(0, 0%, 13%, 0.2);
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav span {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav span:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav span.active {
+    background-color: #2800d8;
+    color: white;
+  }
+
+  /*Style for the image*/
+  .profile_img{
+    width: 200px;
+    height: fit-content;
+    border-radius: 100%;
+  }
+
+  /*Contacts div styling*/
+  .contacts{
+    width: 440px;
+  }
+  .text_div{
+    margin-top: 4px;
+    width: 100%;
+  }
+
+  .none{
+    display: none;
+  }
+  .sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-top: 10px solid #333;
+    box-shadow: 0 10px 10px #000 
+    
+  }
+  .sticky + .main {
+    padding-top: 60px;
+  }
+
+a{
+  color: rgb(255,255,255);
+}
+
+.flex{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.text_div h2{
+  width: 100%;
+  align-content: center;
+}
+.text_div div{
+  width: 150px;
+  min-width: max-content;
+}
