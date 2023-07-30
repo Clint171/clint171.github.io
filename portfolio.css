@@ -15,6 +15,13 @@
     font-size: small;
     font-family: Arial, Helvetica, sans-serif;
   }
+  h1{
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+    font-size: medium;
+    border-bottom: 2px solid #2800d8;
+  }
   div{
     background-color: hsla(0, 0%, 13%, 0.2);
   }
@@ -107,6 +114,10 @@
     background-image: url("annie-spratt-gM8igOIP5MA-unsplash.jpg");
     font-family: Arial, Helvetica, sans-serif;
   }
+  h1{
+    width: 100%;
+    margin: auto;
+  }
   div{
     background-color: hsla(0, 0%, 13%, 0.2);
     /* border: 2px solid #2800d8; */
@@ -185,7 +196,8 @@
     align-content: center;
   }
   .text_div div{
-    width: 150px;
+    width: 300px;
     min-width: max-content;
+    overflow-x: scroll;
   }
 }
