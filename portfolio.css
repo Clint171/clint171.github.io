@@ -1,5 +1,4 @@
 /*I like dark theme ;)*/
-
 /* Dealing with different screen sizes */
 @media (max-width: 240px) {
   /* really tiny screens */
@@ -24,6 +23,7 @@
   }
   div{
     background-color: hsla(0, 0%, 13%, 0.2);
+    /* border: 2px solid #2800d8; */
   }
   
   /* Add a black background color to the top navigation */
@@ -101,7 +101,6 @@
   }
   .text_div div{
     width: 100%;
-    min-width: max-content;
     border-bottom: 2px solid #2800d8;
   }
 
@@ -196,8 +195,7 @@
     align-content: center;
   }
   .text_div div{
-    width: 300px;
-    min-width: max-content;
+    min-width: 350px;
     overflow-x: scroll;
   }
 }
