@@ -83,7 +83,6 @@
       position: fixed;
       top: 0;
       width: 100%;
-      border-top: 10px solid #333;
       box-shadow: 0 10px 10px #000;
       background-color: hsla(0, 0%, 13%, 1);
     }
@@ -185,7 +184,6 @@
       position: fixed;
       top: 0;
       width: 100%;
-      border-top: 10px solid #333;
       box-shadow: 0 10px 10px #000;
       background-color: hsla(0, 0%, 13%, 1);
     }
