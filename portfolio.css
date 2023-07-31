@@ -30,6 +30,8 @@
   .topnav {
       overflow: hidden;
       border-top: 10px solid hsla(0, 0%, 13%, 0.2);
+      background-image: url("annie-spratt-gM8igOIP5MA-unsplash.jpg");
+
     }
     
     /* Style the links inside the navigation bar */
@@ -131,6 +133,8 @@
   .topnav {
       overflow: hidden;
       border-top: 10px solid hsla(0, 0%, 13%, 0.2);
+      background-image: url("annie-spratt-gM8igOIP5MA-unsplash.jpg");
+
     }
     
     /* Style the links inside the navigation bar */
