@@ -19,7 +19,7 @@
     margin: 10px auto;
     text-align: center;
     font-size: medium;
-    border-bottom: 2px solid #2800d8;
+    box-shadow: 0 10px 10px #000;
   }
   div{
     background-color: hsla(0, 0%, 13%, 0.2);
@@ -40,7 +40,7 @@
       padding: 15px 16px;
       text-decoration: none;
       font-size: small;
-      border-bottom: 2px solid #2800d8;
+      border-bottom: 2px solid #000;
     }
     
     /* Change the color of links on hover */
@@ -51,7 +51,7 @@
     
     /* Add a color to the active/current link */
     .topnav span.active {
-      background-color: #2800d8;
+      background-color: #000;
       color: white;
     }
   
@@ -59,16 +59,19 @@
     .profile_img{
       width: 115px;
       border-radius: 100%;
+      box-shadow: 0 10px 10px #000;
     }
   
     /*Contacts div styling*/
     .contacts{
       width: 250px;
       font-size: smaller;
+      box-shadow: 0 10px 10px #000;
     }
     .text_div{
       margin-top: 4px;
       width: 100%;
+      box-shadow: 0 10px 10px #000;
     }
   
     .none{
@@ -94,6 +97,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
+    gap: 5px;
   }
   .text_div h2{
     width: 100%;
@@ -101,7 +105,7 @@
   }
   .text_div div{
     width: 100%;
-    border-bottom: 2px solid #2800d8;
+    /* border-bottom: 2px solid #333; */
   }
 
 }
@@ -155,15 +159,18 @@
     .profile_img{
       width: 198px;
       border-radius: 100%;
+      box-shadow: 0 10px 10px #000;
     }
   
     /*Contacts div styling*/
     .contacts{
       width: 440px;
+      box-shadow: 0 10px 10px #000;
     }
     .text_div{
       margin-top: 4px;
       width: 100%;
+      box-shadow: 0 10px 10px #000;
     }
   
     .none{
@@ -189,6 +196,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
+    gap: 5px;
   }
   .text_div h2{
     width: 100%;
