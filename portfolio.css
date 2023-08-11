@@ -1,212 +1,137 @@
 /*I like dark theme ;)*/
-/* Dealing with different screen sizes */
-@media (max-width: 240px) {
-  /* really tiny screens */
-  
+body{
+  background-color: #222;
+  color: #f2f2f2;
+  background-image: url("annie-spratt-gM8igOIP5MA-unsplash.jpg");
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+  width: 100%;
+  margin: auto;
+  /* box-shadow: 0 3px 3px #2800d8; */
+}
+div{
+  /* background-color: hsla(0, 0%, 0%, 0.4); */
+  /* border: 2px solid #2800d8; */
 }
 
-@media (min-width: 241px) and (max-width: 768px) {
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+    border-top: 10px solid hsla(0, 0%, 13%, 0.2);
+    background-image: url("annie-spratt-gM8igOIP5MA-unsplash.jpg");
+
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav span {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 2px solid #2800d8;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav span:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav span.active {
+    background-color: #2800d8;
+    color: white;
+  }
+
+  /*Style for the image*/
+  .profile_img{
+    width: 198px;
+    border-radius: 100%;
+    box-shadow: 5px 5px 5px #2800d8;
+    border: 2px solid #2800d8;
+  }
+
+  /*Contacts div styling*/
+  .contacts{
+    width: 440px;
+    box-shadow: 0 10px 10px #000;
+  }
+  .text_div{
+    margin-top: 4px;
+    width: 100%;
+    box-shadow: 0 10px 10px #000;
+  }
+
+  .none{
+    display: none;
+  }
+  .sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px #000;
+    background-color: hsla(0, 0%, 13%, 1);
+  }
+  .sticky + .main {
+    padding-top: 60px;
+  }
+
+a{
+  color: rgb(255,255,255);
+}
+
+.flex{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.text_div h2{
+  width: 100%;
+  align-content: center;
+}
+.text_div div{
+  min-width: 350px;
+  overflow-x: scroll;
+}
+
+
+/* @media (max-width: 240px) {
+  
+} */
+
+@media screen and (min-width: 241px) and (max-width: 768px) {
   /* Majority of mobile devices*/
   body{
-    background-color: #222;
-    color: #f2f2f2;
-    background-image: url("annie-spratt-gM8igOIP5MA-unsplash.jpg");
     font-size: small;
-    font-family: Arial, Helvetica, sans-serif;
   }
   h1{
-    width: 100%;
-    margin: 10px auto;
     text-align: center;
     font-size: medium;
-    box-shadow: 0 10px 10px #000;
   }
-  div{
-    background-color: hsla(0, 0%, 13%, 0.2);
-    /* border: 2px solid #2800d8; */
+    
+  .topnav span {
+    font-size: small;
   }
-  
-  /* Add a black background color to the top navigation */
-  .topnav {
-      overflow: hidden;
-      border-top: 10px solid hsla(0, 0%, 13%, 0.2);
-      background-image: url("annie-spratt-gM8igOIP5MA-unsplash.jpg");
 
-    }
-    
-    /* Style the links inside the navigation bar */
-    .topnav span {
-      float: left;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 15px 16px;
-      text-decoration: none;
-      font-size: small;
-      border-bottom: 2px solid #000;
-    }
-    
-    /* Change the color of links on hover */
-    .topnav span:hover {
-      background-color: #ddd;
-      color: black;
-    }
-    
-    /* Add a color to the active/current link */
-    .topnav span.active {
-      background-color: #000;
-      color: white;
-    }
-  
-    /*Style for the image*/
-    .profile_img{
-      width: 115px;
-      border-radius: 100%;
-      box-shadow: 0 10px 10px #000;
-    }
-  
-    /*Contacts div styling*/
-    .contacts{
-      width: 250px;
-      font-size: smaller;
-      box-shadow: 0 10px 10px #000;
-    }
-    .text_div{
-      margin-top: 4px;
-      width: 100%;
-      box-shadow: 0 10px 10px #000;
-    }
-  
-    .none{
-      display: none;
-    }
-    .sticky{
-      position: fixed;
-      top: 0;
-      width: 100%;
-      box-shadow: 0 10px 10px #000;
-      background-color: hsla(0, 0%, 13%, 1);
-    }
-    .sticky + .main {
-      padding-top: 60px;
-    }
-  
-  a{
-    color: rgb(255,255,255);
+  .profile_img{
+    width: 115px;
   }
-  
-  .flex{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    gap: 5px;
+
+  .contacts{
+    width: 250px;
+    font-size: smaller;
   }
-  .text_div h2{
+  .text_div{
     width: 100%;
-    align-content: center;
+  }
+  .sticky + .main {
+    padding-top: 60px;
   }
   .text_div div{
     width: 100%;
-    /* border-bottom: 2px solid #333; */
-  }
-
-}
-@media (min-width: 768px) {
-  /* big phones ,iPad and bigger */
-  body{
-    background-color: #222;
-    color: #f2f2f2;
-    background-image: url("annie-spratt-gM8igOIP5MA-unsplash.jpg");
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  h1{
-    width: 100%;
-    margin: auto;
-    box-shadow: 0 10px 10px #000;
-  }
-  div{
-    background-color: hsla(0, 0%, 13%, 0.2);
-    /* border: 2px solid #2800d8; */
-  }
-  
-  /* Add a black background color to the top navigation */
-  .topnav {
-      overflow: hidden;
-      border-top: 10px solid hsla(0, 0%, 13%, 0.2);
-      background-image: url("annie-spratt-gM8igOIP5MA-unsplash.jpg");
-
-    }
-    
-    /* Style the links inside the navigation bar */
-    .topnav span {
-      float: left;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 15px 16px;
-      text-decoration: none;
-      font-size: 17px;
-      border-bottom: 2px solid #000;
-    }
-    
-    /* Change the color of links on hover */
-    .topnav span:hover {
-      background-color: #ddd;
-      color: black;
-    }
-    
-    /* Add a color to the active/current link */
-    .topnav span.active {
-      background-color: #000;
-      color: white;
-    }
-  
-    /*Style for the image*/
-    .profile_img{
-      width: 198px;
-      border-radius: 100%;
-      box-shadow: 0 10px 10px #000;
-    }
-  
-    /*Contacts div styling*/
-    .contacts{
-      width: 440px;
-      box-shadow: 0 10px 10px #000;
-    }
-    .text_div{
-      margin-top: 4px;
-      width: 100%;
-      box-shadow: 0 10px 10px #000;
-    }
-  
-    .none{
-      display: none;
-    }
-    .sticky{
-      position: fixed;
-      top: 0;
-      width: 100%;
-      box-shadow: 0 10px 10px #000;
-      background-color: hsla(0, 0%, 13%, 1);
-    }
-    .sticky + .main {
-      padding-top: 60px;
-    }
-  
-  a{
-    color: rgb(255,255,255);
-  }
-  
-  .flex{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    gap: 5px;
-  }
-  .text_div h2{
-    width: 100%;
-    align-content: center;
-  }
-  .text_div div{
-    min-width: 350px;
-    overflow-x: scroll;
   }
 }
