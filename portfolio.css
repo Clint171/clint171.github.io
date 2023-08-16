@@ -2,25 +2,18 @@
 body{
   background-color: #222;
   color: #f2f2f2;
-  background-image: url("annie-spratt-gM8igOIP5MA-unsplash.jpg");
+  background-image: url("sl_031420_28950_10.jpg");
   font-family: Arial, Helvetica, sans-serif;
 }
 h1{
   width: 100%;
   margin: auto;
-  /* box-shadow: 0 3px 3px #2800d8; */
-}
-div{
-  /* background-color: hsla(0, 0%, 0%, 0.4); */
-  /* border: 2px solid #2800d8; */
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
     overflow: hidden;
     border-top: 10px solid hsla(0, 0%, 13%, 0.2);
-    background-image: url("annie-spratt-gM8igOIP5MA-unsplash.jpg");
-
   }
   
   /* Style the links inside the navigation bar */
@@ -31,7 +24,7 @@ div{
     padding: 15px 16px;
     text-decoration: none;
     font-size: 17px;
-    border-bottom: 2px solid #2800d8;
+    border-bottom: 2px solid #0442c9;
   }
   
   /* Change the color of links on hover */
@@ -42,7 +35,7 @@ div{
   
   /* Add a color to the active/current link */
   .topnav span.active {
-    background-color: #2800d8;
+    background-color: #0442c9;
     color: white;
   }
 
@@ -50,14 +43,12 @@ div{
   .profile_img{
     width: 198px;
     border-radius: 100%;
-    box-shadow: 5px 5px 5px #2800d8;
-    border: 2px solid #2800d8;
+    border: 2px solid #0442c9;
   }
 
   /*Contacts div styling*/
   .contacts{
     width: 440px;
-    box-shadow: 0 10px 10px #000;
   }
   .text_div{
     margin-top: 4px;
