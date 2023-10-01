@@ -22,6 +22,17 @@ function change(id){
     catch(err){}
   }
   document.getElementById(id).classList.add("active");
+
+  var activeDivs = document.getElementsByClassName("text_div");
+  for (i in activeDivs){
+    try{
+      activeDivs[i].classList.add("none");
+      if (activeDivs[i].id == (id+"_div")){
+        activeDivs[i].classList.remove("none");
+      }
+    }
+    catch(err){}
+  }
 }
 
 window.onload = ()=>{

@@ -5,7 +5,6 @@
     background-image: url("../img/sl_031420_28950_10.jpg");
     font-family: 'Roboto', sans-serif;
     margin: 0px;
-    transition: all 5s ease-in-out;
   }
   h1{
     text-align: center;
@@ -13,7 +12,7 @@
   }
   .header{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: rgba(0,0,0,0.3);
     margin: 0px auto;
@@ -26,16 +25,20 @@
     background-color: rgba(0,0,0,1);
     overflow: hidden;
     border-top: 10px solid hsla(0, 0%, 0%, 0.0);
-    top: 10px;
-    right: 55px;
+    top: 6rem;
+    right: 2rem;
     width: 200px;
     transition: all 0.5s ease-in-out;
   }
   .nav_icon{
+    width: 60px;
+    height: 60px;
     position: fixed;
-    right: 10px;
-    top: 10px;
+    right: 2rem;
+    top: 2rem;
     background-color: rgba(0,0,0,1);
+    border-radius: 20%;
+    border: 2px solid #0442c9;
   }
   /* Style the links inside the navigation bar */
   .topnav span {
@@ -69,13 +72,14 @@
     border: 2px solid #0442c9;
   }
   .main{
-    margin: 20px auto;
+    margin: 0 20px auto;
   }
   /*Contacts div styling*/
   .contacts{
     width: 440px;
   }
   .footer{
+    position: relative; 
     display: flex;
     background-color: rgba();
     width: 100%;
@@ -83,6 +87,7 @@
     align-items: center;
     background-color: rgba(0,0,0,1);
     margin: 0px auto;
+    margin-top: 30px;
     padding: 5px;
   }
   .text_div{
@@ -95,19 +100,18 @@
 a{
   color: rgb(255,255,255);
 }
-
-.text_div h2{
-  width: 50%;
-  text-align: center;
-  border-radius: 5px;
-  background-color: rgb(4, 66, 201);
+a:hover{
+  color: rgb(4, 66, 201);
 }
 .text_div div{
   min-width: 350px;
-  overflow-x: scroll;
+  overflow-wrap: break-word;
 }
 .hidden{
   width: 0;
+}
+.none{
+  display: none;
 }
 
 /* @media (max-width: 240px) {

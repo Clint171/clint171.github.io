@@ -21,19 +21,18 @@
                 <p>Computer Scientist || Tech enthusiast</p>
                 </div>
             </div>
-            <svg class="nav_icon" onclick="showNav()" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 15 15"><path fill="#0442c9" fill-rule="evenodd" d="M7.5 3.1a.4.4 0 1 0 0 .8h7a.4.4 0 0 0 0-.8h-7Zm0 2a.4.4 0 1 0 0 .8h7a.4.4 0 0 0 0-.8h-7Zm-.4 2.4c0-.22.18-.4.4-.4h7a.4.4 0 0 1 0 .8h-7a.4.4 0 0 1-.4-.4Zm.4 1.6a.4.4 0 1 0 0 .8h7a.4.4 0 0 0 0-.8h-7Zm-.4 2.4c0-.22.18-.4.4-.4h7a.4.4 0 0 1 0 .8h-7a.4.4 0 0 1-.4-.4ZM2.5 9.25L5 6H0l2.5 3.25Z" clip-rule="evenodd"/></svg>
+            <svg class="nav_icon" onclick="showNav()" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 15 15"><path fill="white" fill-rule="evenodd" d="M7.5 3.1a.4.4 0 1 0 0 .8h7a.4.4 0 0 0 0-.8h-7Zm0 2a.4.4 0 1 0 0 .8h7a.4.4 0 0 0 0-.8h-7Zm-.4 2.4c0-.22.18-.4.4-.4h7a.4.4 0 0 1 0 .8h-7a.4.4 0 0 1-.4-.4Zm.4 1.6a.4.4 0 1 0 0 .8h7a.4.4 0 0 0 0-.8h-7Zm-.4 2.4c0-.22.18-.4.4-.4h7a.4.4 0 0 1 0 .8h-7a.4.4 0 0 1-.4-.4ZM2.5 9.25L5 6H0l2.5 3.25Z" clip-rule="evenodd"/></svg>
             <div id="topnavbar" class="topnav hidden" onmouseleave="showNav()">
                 <a href="#summary_div"><span id="summary" class="active" onclick="change('summary')">Summary</span></a>
                 <a href="#skills_div"><span id="skills" onclick="change('skills')">Skills</span></a>
                 <a href="#academics_div"><span id="academics" onclick="change('academics')">Academics</span></a>
                 <a href="#certificates_div"><span id="certificates" onclick="change('certificates')">Certificates</span></a>
-                <a href="#contacts"><span id="contacts" onclick="change('contacts')">Certificates</span></a>
+                <a href="#contacts_div"><span id="contacts">Contacts</span></a>
             </div>
         </header>
         <main>
             <div class="main">
                 <div class="text_div" id="summary_div">
-                    <h2>Summary</h2>
                     <div>
                         <h3>Technical skills</h3>
                         <ol>
@@ -42,7 +41,6 @@
                             <li>Git & Github</li><br>
                         </ol>
                     </div>
-                    <!-- <div><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 48 48"><g fill="none" stroke="#0442cb" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M21 6H9a3 3 0 0 0-3 3v22a3 3 0 0 0 3 3h30a3 3 0 0 0 3-3V21M24 34v8"/><path d="m32 6l-4 4l4 4m6-8l4 4l-4 4M14 42h20"/></g></svg></div> -->
                     <div>
                         <h3>Soft skills</h3>
                         <ol>
@@ -57,8 +55,7 @@
                         <span>In progress...</span>
                     </div>
                 </div>
-                <div class="text_div" id="skills_div">
-                    <h2>Skills</h2>
+                <div class="text_div none" id="skills_div">
                     <div>
                         <h3>Technical skills</h3>
                         <h4>Frontend Development</h4>
@@ -73,8 +70,7 @@
 
                     </div>
                 </div>
-                <div class="text_div" id="academics_div">
-                    <h2>Academics</h2>
+                <div class="text_div none" id="academics_div">
                     <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 2048 2048"><path fill="#0442cb" d="M1582 1065q41 72 61 150t21 161v103l-640 321l-640-321q0-60 1-112t9-101t24-98t48-103L256 960v587q29 10 52 28t41 42t26 52t9 59v320H0v-320q0-30 9-58t26-53t40-42t53-28V896L0 832l1024-512l1024 512l-466 233zM256 1728q0-26-19-45t-45-19q-26 0-45 19t-19 45v192h128v-192zm30-896l738 369l738-369l-738-369l-738 369zm1250 568q0-77-15-143t-53-135l-444 222l-444-222q-33 58-50 122t-18 132v24l512 256l512-256z"/></svg>
                     <ul>
                         <li><b>2022 - Current : <a target="_blank" href="https://dkut.ac.ke">Dedan Kimathi University of Technology</a></b><br><br>BSC. Computer Science : in progress, graduating 2026</li><br>
@@ -89,8 +85,7 @@
                         <li><b>2008 - 2017 : <a target="_blank" href="#">Saint Joan's Primary School</a> </b><br><br>Kenya Certificate of Primary Education (K.C.P.E)<br><br>423 marks : A</li>
                     </ul>
                 </div>
-                <div class="text_div" id="certificates_div">
-                    <h2>Certificates</h2>
+                <div class="text_div none" id="certificates_div">
                     <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 15 15"><path fill="#0442cb" d="M9.5 14.5H9a.5.5 0 0 0 .8.4l-.3-.4Zm2-1.5l.3-.4a.5.5 0 0 0-.6 0l.3.4Zm2 1.5l-.3.4a.5.5 0 0 0 .8-.4h-.5Zm-2-3.5A2.5 2.5 0 0 1 9 8.5H8a3.5 3.5 0 0 0 3.5 3.5v-1ZM14 8.5a2.5 2.5 0 0 1-2.5 2.5v1A3.5 3.5 0 0 0 15 8.5h-1ZM11.5 6A2.5 2.5 0 0 1 14 8.5h1A3.5 3.5 0 0 0 11.5 5v1Zm0-1A3.5 3.5 0 0 0 8 8.5h1A2.5 2.5 0 0 1 11.5 6V5ZM9 10.5v4h1v-4H9Zm.8 4.4l2-1.5l-.6-.8l-2 1.5l.6.8Zm1.4-1.5l2 1.5l.6-.8l-2-1.5l-.6.8Zm2.8 1.1v-4h-1v4h1ZM15 5V1.5h-1V5h1Zm-1.5-5h-12v1h12V0ZM0 1.5v12h1v-12H0ZM1.5 15H8v-1H1.5v1ZM0 13.5A1.5 1.5 0 0 0 1.5 15v-1a.5.5 0 0 1-.5-.5H0ZM1.5 0A1.5 1.5 0 0 0 0 1.5h1a.5.5 0 0 1 .5-.5V0ZM15 1.5A1.5 1.5 0 0 0 13.5 0v1a.5.5 0 0 1 .5.5h1ZM3 5h5V4H3v1Zm0 3h3V7H3v1Z"/></svg>
                     <p>In progress ...</p>
                     
@@ -99,7 +94,7 @@
         </main>
         <footer>
         <div class="footer">
-            <div class="contacts">
+            <div class="contacts" id="contacts_div">
                 <h2>Get in touch:</h2>
                 <ul>
                     <li>Email: <a target="_blank" href="mailto:clintsimiyu004@gmail.com">clintsimiyu004@gmail.com</a></li><br>
