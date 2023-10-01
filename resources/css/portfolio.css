@@ -5,6 +5,7 @@
     background-image: url("../img/sl_031420_28950_10.jpg");
     font-family: 'Roboto', sans-serif;
     margin: 0px;
+    transition: all 5s ease-in-out;
   }
   h1{
     text-align: center;
@@ -28,6 +29,7 @@
     top: 10px;
     right: 55px;
     width: 200px;
+    transition: all 0.5s ease-in-out;
   }
   .nav_icon{
     position: fixed;
@@ -45,6 +47,7 @@
     text-decoration: none;
     font-size: 17px;
     border-bottom: 2px solid rgb(4, 66, 201);
+    transition: all 0.3s ease-in-out;
   }
   
   /* Change the color of links on hover */
@@ -65,7 +68,9 @@
     border-radius: 100%;
     border: 2px solid #0442c9;
   }
-
+  .main{
+    margin: 20px auto;
+  }
   /*Contacts div styling*/
   .contacts{
     width: 440px;
@@ -102,7 +107,7 @@ a{
   overflow-x: scroll;
 }
 .hidden{
-  display: none;
+  width: 0;
 }
 
 /* @media (max-width: 240px) {

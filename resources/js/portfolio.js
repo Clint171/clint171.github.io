@@ -1,7 +1,4 @@
 
-// When the user scrolls the page, execute myFunction
-window.onscroll = ()=>{stick()};
-
 // Get the navbar
 var navbar = document.getElementById("topnavbar");
 
