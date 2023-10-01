@@ -1,0 +1,143 @@
+/*I like dark theme ;)*/
+  body{
+    background-color: #222;
+    color: #f2f2f2;
+    background-image: url("../img/sl_031420_28950_10.jpg");
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+  }
+  h1{
+    text-align: center;
+    margin: auto;
+  }
+  .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.3);
+    margin: 0px auto;
+  }
+  /* Add a black background color to the top navigation */
+  .topnav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: rgba(0,0,0,1);
+    overflow: hidden;
+    border-top: 10px solid hsla(0, 0%, 0%, 0.0);
+    top: 10px;
+    right: 55px;
+    width: 200px;
+  }
+  .nav_icon{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    background-color: rgba(0,0,0,1);
+  }
+  /* Style the links inside the navigation bar */
+  .topnav span {
+    width: 100%;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgb(4, 66, 201);
+  }
+  
+  /* Change the color of links on hover */
+  .topnav span:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav span.active {
+    background-color: #0442c9;
+    color: white;
+  }
+
+  /*Style for the image*/
+  .profile_img{
+    width: 198px;
+    border-radius: 100%;
+    border: 2px solid #0442c9;
+  }
+
+  /*Contacts div styling*/
+  .contacts{
+    width: 440px;
+  }
+  .footer{
+    display: flex;
+    background-color: rgba();
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,1);
+    margin: 0px auto;
+    padding: 5px;
+  }
+  .text_div{
+    margin-top: 4px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+  }
+
+
+a{
+  color: rgb(255,255,255);
+}
+
+.text_div h2{
+  width: 50%;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgb(4, 66, 201);
+}
+.text_div div{
+  min-width: 350px;
+  overflow-x: scroll;
+}
+.hidden{
+  display: none;
+}
+
+/* @media (max-width: 240px) {
+  
+} */
+
+@media screen and (min-width: 241px) and (max-width: 768px) {
+  /* Majority of mobile devices*/
+  body{
+    font-size: small;
+  }
+  h1{
+    text-align: center;
+    font-size: medium;
+  }
+    
+  .topnav span {
+    font-size: small;
+  }
+
+  .profile_img{
+    width: 115px;
+  }
+
+  .contacts{
+    width: 250px;
+    font-size: smaller;
+  }
+  .text_div{
+    width: 100%;
+  }
+  .sticky + .main {
+    padding-top: 60px;
+  }
+  .text_div div{
+    width: 100%;
+  }
+}
