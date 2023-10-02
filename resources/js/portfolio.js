@@ -9,17 +9,26 @@ function showNav() {
   if (navbar.classList.contains("hidden")) {
     navbar.classList.remove("hidden");
   } else {
+    setTimeout(()=>{
     navbar.classList.add("hidden");
+    }, 1000);
   }
 }
 
 // Flash the contacts div when the contact button is clicked
 function flashContacts(){
   var contacts = document.getElementById("footer");
-  contacts.classList.add("flash");
-  setTimeout(()=>{
-    contacts.classList.remove("flash");
-  }, 1000);
+  if (contacts.style.opacity > 0){
+    contacts.style.opacity = 0;
+    setTimeout(()=>{  
+    contacts.style.display = "none";
+    },500);
+  }
+  else{
+    contacts.style.opacity = 0.9;
+    contacts.style.display = "flex";
+  }
+
 }
 
 function change(id){

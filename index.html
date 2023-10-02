@@ -21,16 +21,17 @@
                 <p>Computer Scientist || Tech enthusiast</p>
                 </div>
             </div>
-            <svg class="nav_icon" onclick="showNav()" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 15 15"><path fill="white" fill-rule="evenodd" d="M7.5 3.1a.4.4 0 1 0 0 .8h7a.4.4 0 0 0 0-.8h-7Zm0 2a.4.4 0 1 0 0 .8h7a.4.4 0 0 0 0-.8h-7Zm-.4 2.4c0-.22.18-.4.4-.4h7a.4.4 0 0 1 0 .8h-7a.4.4 0 0 1-.4-.4Zm.4 1.6a.4.4 0 1 0 0 .8h7a.4.4 0 0 0 0-.8h-7Zm-.4 2.4c0-.22.18-.4.4-.4h7a.4.4 0 0 1 0 .8h-7a.4.4 0 0 1-.4-.4ZM2.5 9.25L5 6H0l2.5 3.25Z" clip-rule="evenodd"/></svg>
+            <svg class="nav_icon" onclick="showNav()" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path fill="#0442c9" d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"/></svg>
             <div id="topnavbar" class="topnav hidden" onmouseleave="showNav()" ontouchend="showNav()">
-                <a href="#summary_div"><span id="summary" class="active" onclick="change('summary')">Summary</span></a>
-                <a href="#skills_div"><span id="skills" onclick="change('skills')">Skills</span></a>
-                <a href="#academics_div"><span id="academics" onclick="change('academics')">Academics</span></a>
-                <a href="#certificates_div"><span id="certificates" onclick="change('certificates')">Certificates</span></a>
-                <a href="#contacts_div"><span id="contacts" onclick="flashContacts()">Contacts</span></a>
+                <span id="summary" class="active" onclick="change('summary')">Summary</span>
+                <span id="projects" onclick="change('projects')">Projects</span>
+                <span id="skills" onclick="change('skills')">Skills</span>
+                <span id="academics" onclick="change('academics')">Academics</span>
+                <span id="certificates" onclick="change('certificates')">Certificates</span>
+                <span id="contacts" onclick="flashContacts()">Contacts</span>
             </div>
         </header>
-        <main>
+        <main id="main">
             <div class="main">
                 <div class="text_div" id="summary_div">
                     <div>
@@ -53,6 +54,14 @@
                     <div>
                         <h3>Certificates</h3>
                         <span>In progress...</span>
+                    </div>
+                </div>
+                <div class="text_div" id="projects_div">
+                    <div class="project_display">
+                        <h3>Javascript-File-Server</h3>
+                    </div>
+                    <div class="project_display">
+                        <h3>Uptravellers</h3>
                     </div>
                 </div>
                 <div class="text_div none" id="skills_div">
@@ -105,6 +114,7 @@
                 </ul>
             </div>
             <div><a target="_blank" href="https://www.twitter.com/SimiyuClint"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path fill="#0442cb" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584l-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a><span>    </span><a target="_blank" href="https://www.linkedin.com/in/clint-simiyu-b80b9b237"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 128 128"><path fill="#0442cb" d="M116 3H12a8.91 8.91 0 0 0-9 8.8v104.42a8.91 8.91 0 0 0 9 8.78h104a8.93 8.93 0 0 0 9-8.81V11.77A8.93 8.93 0 0 0 116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1 1 10.49-10.5a10.5 10.5 0 0 1-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"/></svg></a><span>    </span> <a target="_blank" href="https://github.com/Clint171"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><g fill="none"><g clip-path="url(#akarIconsGithubFill0)"><path fill="#0442cb" fill-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385c.6.105.825-.255.825-.57c0-.285-.015-1.23-.015-2.235c-3.015.555-3.795-.735-4.035-1.41c-.135-.345-.72-1.41-1.23-1.695c-.42-.225-1.02-.78-.015-.795c.945-.015 1.62.87 1.845 1.23c1.08 1.815 2.805 1.305 3.495.99c.105-.78.42-1.305.765-1.605c-2.67-.3-5.46-1.335-5.46-5.925c0-1.305.465-2.385 1.23-3.225c-.12-.3-.54-1.53.12-3.18c0 0 1.005-.315 3.3 1.23c.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23c.66 1.65.24 2.88.12 3.18c.765.84 1.23 1.905 1.23 3.225c0 4.605-2.805 5.625-5.475 5.925c.435.375.81 1.095.81 2.22c0 1.605-.015 2.895-.015 3.3c0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z" clip-rule="evenodd"/></g><defs><clipPath id="akarIconsGithubFill0"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></g></svg></a></div>
+            <button onclick="flashContacts()">Close</button>
         </div>
         </footer>
         <script src="./resources/js/portfolio.js"></script>

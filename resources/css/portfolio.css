@@ -79,18 +79,38 @@
     width: 440px;
   }
   .footer{
-    position: relative; 
-    display: flex;
+    display: none;
+    position: fixed;
+    top: 25%;
+    left: 20%;
+    right: 20%;
     background-color: rgba();
-    width: 100%;
+    width: 60%;
     justify-content: center;
     align-items: center;
     background-color: rgba(0,0,0,1);
     margin: 0px auto;
-    margin-top: 30px;
+    margin-top: 1rem;
     padding: 5px;
     transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,1);
   }
+  .footer button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: large;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    border: 2px solid #0442c9;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+
   .text_div{
     margin-top: 4px;
     width: 100%;
