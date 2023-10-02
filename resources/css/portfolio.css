@@ -89,6 +89,7 @@
     margin: 0px auto;
     margin-top: 30px;
     padding: 5px;
+    transition: all 0.5s ease-in-out;
   }
   .text_div{
     margin-top: 4px;
@@ -112,6 +113,13 @@ a:hover{
 }
 .none{
   display: none;
+}
+.flash{
+  background-color: rgba(256,256,256,1);
+  color: black;
+}
+.flash a{
+  color: black;
 }
 
 /* @media (max-width: 240px) {

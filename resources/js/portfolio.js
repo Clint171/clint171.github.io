@@ -13,6 +13,15 @@ function showNav() {
   }
 }
 
+// Flash the contacts div when the contact button is clicked
+function flashContacts(){
+  var contacts = document.getElementById("footer");
+  contacts.classList.add("flash");
+  setTimeout(()=>{
+    contacts.classList.remove("flash");
+  }, 1000);
+}
+
 function change(id){
   var activeSpans = document.getElementsByClassName("active");
   for (i in activeSpans){
