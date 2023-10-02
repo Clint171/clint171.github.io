@@ -128,16 +128,8 @@ a:hover{
     font-size: medium;
   }
   .topnav {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    background-color: rgba(0,0,0,1);
-    overflow: hidden;
-    border-top: 10px solid hsla(0, 0%, 0%, 0.0);
     top: 3.8rem;
     right: 1rem;
-    width: 200px;
-    transition: all 0.5s ease-in-out;
   }
     
   .topnav span {
@@ -150,12 +142,8 @@ a:hover{
   .nav_icon{
     width: 40px;
     height: 40px;
-    position: fixed;
     right: 1rem;
     top: 1rem;
-    background-color: rgba(0,0,0,1);
-    border-radius: 20%;
-    border: 2px solid #0442c9;
   }
 
   .contacts{
