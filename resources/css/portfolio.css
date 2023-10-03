@@ -93,7 +93,6 @@
     align-items: center;
     background-color: rgba(0,0,0,1);
     margin: 0px auto;
-    margin-top: 1rem;
     padding: 5px;
     transition: all 0.5s ease-in-out;
     border-radius: 10px;
@@ -208,15 +207,18 @@ a:hover{
     right: auto;
     bottom:0%;
     width: 100%;
+    align-items: flex-start;
+    padding-top: 30%;
+    
 
   }
   .footer button{
-    bottom: 20%;
+    bottom: 30%;
     right:auto;
 
   }
   .contacts{
-    font-size: smaller;
+    font-size: small;
   }
   .text_div{
     width: 100%;
@@ -262,15 +264,17 @@ a:hover{
     right: auto;
     bottom:0%;
     width: 100%;
+    align-items: flex-start;
+    padding-top: 30%;
 
   }
   .footer button{
-    bottom: 20%;
+    bottom: 30%;
     right:auto;
 
   }
   .contacts{
-    font-size: smaller;
+    font-size: small;
   }
   .text_div{
     width: 100%;
