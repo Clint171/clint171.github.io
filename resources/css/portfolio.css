@@ -74,6 +74,9 @@
   .main{
     margin: 0 20px auto;
   }
+  #projects_div{
+    background-color: rgba(0,0,0,0);
+  }
   /*Contacts div styling*/
   .contacts{
     width: 440px;
@@ -147,23 +150,86 @@ a:hover{
   color: black;
 }
 .card{
+  
   width: 300px;
   height: 300px;
+  padding: 10px;
   margin: 10px;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.6);
   border-radius: 10%;
   transition: all 0.5s ease-in-out;  
 }
-.card :hover{
-  background-color: rgba(9, 6, 214, 0.5);
-
+.card-title{
+  text-align: center;
+  font-size: medium;
+  color:#0554ff;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+.card-text{
+  text-align: center;
+  color: white;
 }
 
-/* @media (max-width: 240px) {
-  
-} */
+@media screen and (min-width: 200px) and (max-width: 420px) {
+   /* Majority of mobile devices*/
+   body{
+    font-size: small;
+  }
+  h1{
+    text-align: center;
+    font-size: medium;
+  }
+  .flex{
+    flex-direction:column;
+  }
+  .topnav {
+    top: 3.8rem;
+    right: 1rem;
+  }
+    
+  .topnav span {
+    font-size: small;
+  }
 
-@media screen and (min-width: 241px) and (max-width: 768px) {
+  .profile_img{
+    width: 100px;
+  }
+  .nav_icon{
+    width: 40px;
+    height: 40px;
+    right: 1rem;
+    top: 1rem;
+  }
+  .footer{
+    top: 0%;
+    left: auto;
+    right: auto;
+    bottom:0%;
+    width: 100%;
+
+  }
+  .footer button{
+    bottom: 20%;
+    right:auto;
+
+  }
+  .contacts{
+    font-size: smaller;
+  }
+  .text_div{
+    width: 100%;
+  }
+  .sticky + .main {
+    padding-top: 60px;
+  }
+  .text_div div{
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 421px) and (max-width: 768px) {
   /* Majority of mobile devices*/
   body{
     font-size: small;
