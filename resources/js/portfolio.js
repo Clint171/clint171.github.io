@@ -9,9 +9,7 @@ function showNav() {
   if (navbar.classList.contains("hidden")) {
     navbar.classList.remove("hidden");
   } else {
-    setTimeout(()=>{
     navbar.classList.add("hidden");
-    }, 1000);
   }
 }
 
@@ -25,8 +23,8 @@ function flashContacts(){
     },500);
   }
   else{
-    contacts.style.opacity = 0.9;
     contacts.style.display = "flex";
+    contacts.style.opacity = 0.9;
   }
 
 }
