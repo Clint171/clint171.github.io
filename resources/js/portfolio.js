@@ -65,6 +65,20 @@ xhr.onload = function(){
   var projects = document.getElementById("projects_div");
   for (i in repos){
     var repo = repos[i];
+    //Find image url in the repo by looking in the root directory for a file with the name project_img.png
+    var img = "https://raw.githubusercontent.com/Clint171/"+repo.name+"/master/project_img.png";
+    //Check if the image exists
+    var http = new XMLHttpRequest();
+    http.open('HEAD', img, false);
+    http.send();
+    //If the image does not exist, skip this repo
+    if (http.status == 404){
+      continue;
+    }
+    //create image element
+    var imgElement = document.createElement("img");
+    imgElement.src = img;
+    imgElement.classList.add("card-img-top");
     var card = document.createElement("div");
     card.classList.add("card");
     var cardBody = document.createElement("div");
@@ -84,6 +98,7 @@ xhr.onload = function(){
     cardBody.appendChild(cardText);
     cardBody.appendChild(cardLink);
     card.appendChild(cardBody);
+    card.appendChild(imgElement);
     projects.appendChild(card);
   }
 }
