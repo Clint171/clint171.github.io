@@ -149,14 +149,16 @@ a:hover{
   color: black;
 }
 .card{
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 300px;
   height: 300px;
   padding: 10px;
   margin: 10px;
   background-color: rgba(0,0,0,0.6);
   border-radius: 10%;
-  transition: all 0.5s ease-in-out;  
+  transition: all 0.5s ease-in-out;
 }
 .card-title{
   text-align: center;
@@ -175,6 +177,7 @@ a:hover{
   height: 60%;
   margin-top: 1rem;
   border-radius: 10px;
+  border: 2px solid #0442c9;
 }
 
 @media screen and (min-width: 200px) and (max-width: 420px) {
