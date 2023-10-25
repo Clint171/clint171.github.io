@@ -96,7 +96,7 @@ xhr.onload = function(){
     cardBody.appendChild(cardText);
     cardBody.appendChild(cardLink);
     card.appendChild(cardBody);
-    card.appendChild(imgElement);
+    cardLink.appendChild(imgElement);
     projects.appendChild(card);
   }
 }
