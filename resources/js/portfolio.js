@@ -154,6 +154,7 @@ function displayProjects(){
       card.appendChild(cardBody);
       card.appendChild(imgElement);
       projects.appendChild(card);
+
     }
   },
   (error)=>{
@@ -163,7 +164,7 @@ function displayProjects(){
     projects.appendChild(failed);
     console.log(error);
   });
-  }, 100);
+  }, 10);
 }
   async function displaySummary(){
 
