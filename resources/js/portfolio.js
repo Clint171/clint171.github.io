@@ -1,41 +1,3 @@
-// //create cursor element
-// var cursor = document.createElement("iconify-icon");
-// cursor.setAttribute("icon", "gis:arrow-o");
-// cursor.setAttribute("width", "40");
-// cursor.setAttribute("height", "40");
-// cursor.classList.add("cursor");
-// document.body.appendChild(cursor);
-// cursor.style.transform = "scale(0.9)";
-
-
-// //cursor hidden when mouse leaves window
-// document.addEventListener("mouseleave", ()=>{
-//   cursor.style.display = "none";
-// });
-
-// //cursor follow mouse
-// document.addEventListener("mousemove", (e)=>{
-//   cursor.style.left = e.pageX + "px";
-//   cursor.style.top = e.pageY + "px";
-// });
-// //cursor click animation
-// document.addEventListener("mousedown", ()=>{
-//   cursor.style.transform = "scale(0.7)";
-// });
-// document.addEventListener("mouseup", ()=>{
-//   cursor.style.transform = "scale(0.9)";
-// });
-// //hide cursor when link is hovered
-// var links = document.getElementsByTagName("a");
-// for (i=0; i<links.length; i++){
-//   links[i].addEventListener("mouseover", ()=>{
-//     cursor.style.display = "none";
-//   });
-//   links[i].addEventListener("mouseout", ()=>{
-//     cursor.style.display = "block";
-//   });
-// }
-
 // Get the navbar
 var navbar = document.getElementById("topnavbar");
 
@@ -119,11 +81,12 @@ function displayProjects(){
     var repos = response;
     for (i in repos){
       var repo = repos[i];
+      alert(repo);
       //Find image url in the repo by looking in the root directory for a file with the name project_img.png
       var img = "https://raw.githubusercontent.com/Clint171/"+repo.name+"/master/project_img.png";
       //Check if the image exists
       var http = new XMLHttpRequest();
-      http.open('HEAD', img, true);
+      http.open('HEAD', img, false);
       http.send();
       //If the image does not exist, skip this repo
       if (http.status == 404){
