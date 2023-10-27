@@ -74,6 +74,7 @@
   .main{
     margin: 0 20px auto;
   }
+ 
   #projects_div{
     background-color: rgba(0,0,0,0);
   }
@@ -157,6 +158,7 @@ a:hover{
   border-radius: 10px;
   
 }
+
 .hidden{
   width: 0;
 }
@@ -209,11 +211,6 @@ a:hover{
 .cursor{
   color: #0554ff;
   position: fixed;
-}
-.bottom{
-  opacity: 0;
-  position: fixed;
-  bottom: 0;
 }
 
 @media screen and (min-width: 200px) and (max-width: 420px) {
