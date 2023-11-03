@@ -77,11 +77,12 @@ function displayProjects(){
 
   setTimeout(()=>{
   getProjects.then((response)=>{
+
+
     projects.innerHTML = "";
     var repos = response;
     for (i in repos){
       var repo = repos[i];
-      alert(repo);
       //Find image url in the repo by looking in the root directory for a file with the name project_img.png
       var img = "https://raw.githubusercontent.com/Clint171/"+repo.name+"/master/project_img.png";
       //Check if the image exists
