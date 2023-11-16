@@ -70,7 +70,15 @@
     width: 198px;
     border-radius: 100%;
     border: 2px solid #0442c9;
+    
   }
+  .profile_img:hover{
+    position: fixed;
+    left: 7em;
+    top: 7em;
+    transform: scale(2.0);
+  }
+
   .main{
     margin: 0 20px auto;
   }
