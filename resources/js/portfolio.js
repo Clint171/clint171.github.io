@@ -54,100 +54,121 @@ window.onload = ()=>{
   change("summary");
 }
 
-let getProjects = new Promise((resolve, reject)=>{
-  //Query github api to get repositories and for each repository create a card in the projects section
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://api.github.com/users/Clint171/repos", true);
-  xhr.onload = function(){
-    resolve(JSON.parse(this.responseText));
-    reject("Failed to load projects");
-  }
-  xhr.send();
-});
-
-
 function displayProjects(){
   change("projects");
   var projects = document.getElementById("projects_div");
-  let loadingIcon = document.createElement("iconify-icon");
-  loadingIcon.setAttribute("icon", "eos-icons:bubble-loading");
-  loadingIcon.setAttribute("width", "200");
-  loadingIcon.setAttribute("height", "200");
-  projects.appendChild(loadingIcon);
-
-  setTimeout(()=>{
-  getProjects.then((response)=>{
-    projects.innerHTML = "";
-    var repos = response;
-    for (i in repos){
-      var repo = repos[i];
-      //Find image url in the repo by looking in the root directory for a file with the name project_img.png
-      var img = "https://raw.githubusercontent.com/Clint171/"+repo.name+"/master/project_img.png";
-      //Check if the image exists
-      var http = new XMLHttpRequest();
-      http.open('HEAD', img, false);
-      http.send();
-      //If the image does not exist, skip this repo
-      if (http.status == 404){
-        continue;
-      }
-      //create image element
-      var imgElement = document.createElement("img");
-      imgElement.src = img;
-      imgElement.classList.add("card-img-top");
-      var card = document.createElement("div");
-      card.classList.add("card");
-      var cardBody = document.createElement("div");
-      cardBody.classList.add("card-body");
-      var cardTitle = document.createElement("h5");
-      cardTitle.classList.add("card-title");
-      cardTitle.innerHTML = repo.name;
-      var cardText = document.createElement("p");
-      cardText.classList.add("card-text");
-      cardText.innerHTML = repo.description;
-      var cardLink = document.createElement("a");
-      cardLink.classList.add("card-link");
-      cardLink.innerHTML = "View on Github";
-      cardLink.href = repo.html_url;
-      cardLink.target = "_blank";
-      cardBody.appendChild(cardTitle);
-      cardBody.appendChild(cardText);
-      cardBody.appendChild(cardLink);
-      card.appendChild(cardBody);
-      card.appendChild(imgElement);
-      projects.appendChild(card);
-
+  projects.innerHTML = "";
+  // let loadingIcon = document.createElement("iconify-icon");
+  // loadingIcon.setAttribute("icon", "eos-icons:bubble-loading");
+  // loadingIcon.setAttribute("width", "200");
+  // loadingIcon.setAttribute("height", "200");
+  // projects.appendChild(loadingIcon);
+  class Project{
+    constructor(title, description, link, githubLink, image){
+      this.title = title;
+      this.description = description;
+      this.link = link;
+      this.githubLink = githubLink;
+      this.image = image;
     }
-  },
-  (error)=>{
-    alert("Projects failed to load");
-    let failed = document.createElement("p");
-    failed.innerHTML = "Failed to load projects";
-    projects.appendChild(failed);
-    console.log(error);
-  });
-  }, 10);
-}
-  async function displaySummary(){
+  }
+  let projectsList = [];
 
+  let portfolio = new Project("Portfolio", "This website", "https://clint-simiyu.onrender.com" , "https://github.com/Clint171/clint171.github.io" , "https://raw.githubusercontent.com/Clint171/clint171.github.io/master/resources/images/portfolio.png");
+  let todo = new Project("Todo App", "A simple todo app", "https://clints-todo.onrender.com" ,"https://clint171.github.io/todo-js/" , "https://raw.githubusercontent.com/Clint171/clint171.github.io/master/resources/images/todo.png");
+  let fileServer = new Project("File Server", "A simple file server", "https://file-server-xp39.onrender.com" , "https://github.com/Clint171/Javascript-File-Server" , "https://raw.githubusercontent.com/Clint171/clint171.github.io/master/resources/images/fileserver.png");
+  let welfare = new Project("Welfare" , "Landing page for DKUT welfare", "https://clint171.github.io/welfare" , "https://github.com/Clint171/welfare" , "https://raw.githubusercontent.com/Clint171/clint171.github.io/master/resources/images/welfare.png");
+
+  projectsList.push(portfolio);
+  projectsList.push(todo);
+  projectsList.push(fileServer);
+  projectsList.push(welfare);
+
+  for (let i = 0; i < projectsList.length; i++){
+    let project = projectsList[i];
+    let projectDiv = document.createElement("div");
+    projectDiv.classList.add("card");
+    let projectImage = document.createElement("img");
+    projectImage.src = project.image;
+    projectImage.classList.add("card-img-top");
+    projectDiv.appendChild(projectImage);
+    let projectTitle = document.createElement("h2");
+    projectTitle.innerHTML = project.title;
+    projectTitle.classList.add("card-title");
+    projectDiv.appendChild(projectTitle);
+    let projectDescription = document.createElement("p");
+    projectDescription.innerHTML = project.description;
+    projectDescription.classList.add("card-text");
+    projectDiv.appendChild(projectDescription);
+    let projectLinks = document.createElement("div");
+    projectLinks.classList.add("projectLinks");
+    let projectLink = document.createElement("a");
+    projectLink.href = project.link;
+    projectLink.innerHTML = "View";
+    projectLink.classList.add("projectLink");
+    projectLinks.appendChild(projectLink);
+    let githubLink = document.createElement("a");
+    githubLink.href = project.githubLink;
+    githubLink.innerHTML = "Github";
+    githubLink.classList.add("projectLink");
+    projectLinks.appendChild(githubLink);
+    projectDiv.appendChild(projectLinks);
+    projects.appendChild(projectDiv);
+  
   }
-  
-  async function displayAbout(){
-  
-  }
-  
-  async function displaySkills(){
-  
-  }
-  
-  async function displayAcadmics(){
-  
-  }
-  
-  async function displayCertificates(){
-  
-  }
-  
-  async function displayContacts(){
-  
-  }
+}
+
+//memes
+let memeLinks = new Promise((resolve, reject)=>{
+  fetch("https://meme-api.com/gimme").then((response)=>{
+    resolve(response.json());
+    reject("Failed to load memes");
+  });
+});
+memeLinks.then((response)=>{
+  var meme = document.getElementById("memeImg");
+  meme.src = response.url;
+  meme.alt = response.title;
+  meme.title = response.title;
+  meme.addEventListener("click", ()=>{
+    window.open(response.postLink, "_blank");
+  });
+});
+setInterval(()=>{
+  let memeLinks = new Promise((resolve, reject)=>{
+    fetch("https://meme-api.com/gimme").then((response)=>{
+      resolve(response.json());
+      reject("Failed to load memes");
+    });
+  });
+  memeLinks.then((response)=>{
+    let meme = document.getElementById("memeImg");
+    meme.src = response.url;
+    meme.alt = response.title;
+    meme.title = response.title;
+    meme.addEventListener("click", ()=>{
+      window.open(response.postLink, "_blank");
+    });
+  });
+}, 10000);
+
+
+//quotes
+fetch("https://api.quotable.io/quotes/random/").then((response)=>{
+      response.json().then(data=>{
+        data = data[0];
+        let quote = document.getElementById("randomQuote");
+      quote.innerHTML = data.content+"<br><center>~"+data.author+"</center>";
+      });
+});
+
+setInterval(()=>{
+  fetch("https://api.quotable.io/quotes/random/").then((response)=>{
+    response.json().then(data=>{
+      data = data[0];
+      let quote = document.getElementById("randomQuote");
+    quote.innerHTML = data.content+"<br><center>~"+data.author+"</center>";
+    });
+  });
+
+}, 10000);

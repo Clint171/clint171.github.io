@@ -21,7 +21,7 @@
                 <p>Computer Scientist || Tech enthusiast</p>
                 </div>
             </div>
-            <svg class="nav_icon" onclick="showNav()" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path fill="#0442c9" d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"/></svg>
+            <svg class="nav_icon" id="navicon" onclick="showNav()" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><path fill="#0442c9" d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"/></svg>
             <div id="topnavbar" class="topnav hidden" onmouseleave="showNav()">
                 <span id="summary" class="active" onclick="change('summary')">Summary</span>
                 <span id="aboutMe" onclick="change('aboutMe')">About me</span>
@@ -35,7 +35,8 @@
         <main id="main">
             <div class="main">
                 <div class="text_div" id="summary_div">
-                    <div>
+                    <div id="technicalSkills">
+
                         <h3>Technical skills</h3>
                         <ol>
                             <li>Frontend development <ul><li>HTML</li><li>CSS</li><li>Javascript</li></ul></li><br>
@@ -43,7 +44,7 @@
                             <li>Git & Github</li><br>
                         </ol>
                     </div>
-                    <div>
+                    <div id="softSkills">
                         <h3>Soft skills</h3>
                         <ol>
                             <li>Teamwork</li><br>
@@ -52,16 +53,24 @@
                             <li>Time management</li><br>
                         </ol>
                     </div>
+                    <div id="randomMeme">
+                        <h3>😂 Random Meme</h3>
+                        <img src="" id="memeImg" class ="stat" style="height: 400px;"/>
+                    </div>
                 </div>
                 <div class="text_div none" id="projects_div">   
                 </div>
                 <div class="text_div none" id="aboutMe_div">
                     <div>
                         <h2>Hi 👋, I'm Clint G. L. Simiyu</h2>
-                        <h3>A passionate computer scientist and web developer</h3>
+                        <h3>A passionate computer scientist and software developer</h3>
+                        <p id="randomQuote"></p>
                     </div>
                 </div>
                 <div class="text_div none" id="skills_div">
+                    <div>
+                        <img class="stat" src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Dev quote">
+                    </div>
                     <div>
                         <h3>Languages and Tools:</h3>
 
@@ -108,11 +117,11 @@
                             </a> 
                         </p>
 
-                        <p><img class="stat"  src="https://github-readme-stats.vercel.app/api/top-langs?username=clint171&show_icons=true&locale=en&layout=compact" alt="clint171" /></p>
+                        <p><img class="stat"  src="https://github-readme-stats.vercel.app/api/top-langs?username=clint171&show_icons=true&locale=en&layout=compact&theme=tokyonight" alt="clint171" /></p>
 
-                        <p>&nbsp;<img class="stat" src="https://github-readme-stats.vercel.app/api?username=clint171&show_icons=true&locale=en" alt="clint171" /></p>
+                        <p>&nbsp;<img class="stat" src="https://github-readme-stats.vercel.app/api?username=clint171&show_icons=true&locale=en&theme=tokyonight" alt="clint171" /></p>
 
-                        <p><img class="stat" src="https://github-readme-streak-stats.herokuapp.com/?user=clint171&" alt="clint171" /></p>
+                        <p><img class="stat" src="https://github-readme-streak-stats.herokuapp.com/?user=clint171&theme=tokyonight" alt="clint171" /></p>
                     </div>
                 </div>
                 <div class="text_div none" id="academics_div">
