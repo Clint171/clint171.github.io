@@ -88,6 +88,7 @@ function displayProjects(){
     let project = projectsList[i];
     let projectDiv = document.createElement("div");
     projectDiv.classList.add("card");
+    projectDiv.classList.add("hover-expand");
     let projectImage = document.createElement("img");
     projectImage.src = project.image;
     projectImage.classList.add("card-img-top");
@@ -150,7 +151,7 @@ setInterval(()=>{
       window.open(response.postLink, "_blank");
     });
   });
-}, 10000);
+}, 12000);
 
 
 //quotes
@@ -171,4 +172,4 @@ setInterval(()=>{
     });
   });
 
-}, 10000);
+}, 20000);
