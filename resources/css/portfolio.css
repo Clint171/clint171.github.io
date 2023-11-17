@@ -72,12 +72,6 @@
     border: 2px solid #0442c9;
     
   }
-  .profile_img:hover{
-    position: fixed;
-    left: 7em;
-    top: 7em;
-    transform: scale(2.0);
-  }
 
   .main{
     margin: 0 20px auto;
@@ -130,8 +124,17 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  gap: 5em;
   align-items: center;
   min-width: 100%;
+}
+.hover-expand:hover{
+  background-color: rgba(12, 12, 12, 0.8);
+  background-size: cover;
+  box-shadow: 0px 0px 8px 2px rgb(5, 84, 255);
+  padding: 1em;
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
 }
 
 a{
@@ -140,23 +143,23 @@ a{
 a:hover{
   color: rgb(4, 66, 201);
 }
-.text_div div{
-  min-width: 350px;
-  max-width: 100%;
-  overflow-wrap: break-word;
+.projectLinks{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
+  width: 100%;
 }
-.text_div div .icon{
+
+.icon{
   width: 20%;
+  min-width: 100px;
   height: auto;
   margin: 1em;
   border-radius: 10px;
   
 }
-.text_div div .icon:hover{
+.icon:hover{
   background-color: rgba(255,255,255,0.4);
   
 }
@@ -165,6 +168,21 @@ a:hover{
   height: 200px;
   border-radius: 10px;
   
+}
+.skills-div{
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+.center{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .hidden{
@@ -191,10 +209,6 @@ a:hover{
   border-radius: 10%;
   transition: all 0.5s ease-in-out;
 }
-.card:hover{
-  background-color: rgba(12, 12, 12, 0.8);
-  box-shadow: 0px 0px 8px 2px rgb(5, 84, 255);
-}
 .card-title{
   text-align: center;
   font-size: medium;
@@ -215,6 +229,14 @@ a:hover{
   border-radius: 10px;
   border: 2px solid #0442c9;
 }
+.card-link{
+  text-align: center;
+  color: white;
+  font-size: medium;
+  margin: 0px;
+  padding: 0px;
+}
+
 .cursor{
   color: #0554ff;
   position: fixed;
@@ -283,6 +305,11 @@ a:hover{
   .text_div div{
     width: 100%;
   }
+  .hover-expand:hover{
+    background-color: rgba(12, 12, 12, 0.8);
+    box-shadow: 0px 0px 8px 2px rgb(5, 84, 255);
+    transition: all 0.5s ease-in-out;
+  }
 }
 
 @media screen and (min-width: 421px) and (max-width: 768px) {
@@ -338,5 +365,10 @@ a:hover{
   }
   .text_div div{
     width: 100%;
+  }
+  .hover-expand:hover{
+    background-color: rgba(12, 12, 12, 0.8);
+    box-shadow: 0px 0px 8px 2px rgb(5, 84, 255);
+    transition: all 0.5s ease-in-out;
   }
 }

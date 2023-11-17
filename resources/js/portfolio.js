@@ -74,10 +74,10 @@ function displayProjects(){
   }
   let projectsList = [];
 
-  let portfolio = new Project("Portfolio", "This website", "https://clint-simiyu.onrender.com" , "https://github.com/Clint171/clint171.github.io" , "https://raw.githubusercontent.com/Clint171/clint171.github.io/master/resources/images/portfolio.png");
-  let todo = new Project("Todo App", "A simple todo app", "https://clints-todo.onrender.com" ,"https://clint171.github.io/todo-js/" , "https://raw.githubusercontent.com/Clint171/clint171.github.io/master/resources/images/todo.png");
-  let fileServer = new Project("File Server", "A simple file server", "https://file-server-xp39.onrender.com" , "https://github.com/Clint171/Javascript-File-Server" , "https://raw.githubusercontent.com/Clint171/clint171.github.io/master/resources/images/fileserver.png");
-  let welfare = new Project("Welfare" , "Landing page for DKUT welfare", "https://clint171.github.io/welfare" , "https://github.com/Clint171/welfare" , "https://raw.githubusercontent.com/Clint171/clint171.github.io/master/resources/images/welfare.png");
+  let portfolio = new Project("Portfolio", "This website", "https://clint-simiyu.onrender.com" , "https://github.com/Clint171/clint171.github.io" , "./resources/img/portfolio.png");
+  let todo = new Project("Todo App", "A simple todo app", "https://clints-todo.onrender.com" ,"https://clint171.github.io/todo-js/" , "./resources/img/todo.png");
+  let fileServer = new Project("File Server", "A simple file server", "https://file-server-xp39.onrender.com" , "https://github.com/Clint171/Javascript-File-Server" , "./resources/img/fileserver.png");
+  let welfare = new Project("Welfare" , "Landing page for DKUT welfare", "https://clint171.github.io/welfare" , "https://github.com/Clint171/welfare" , "./resources/img/welfare.png");
 
   projectsList.push(portfolio);
   projectsList.push(todo);
@@ -88,6 +88,7 @@ function displayProjects(){
     let project = projectsList[i];
     let projectDiv = document.createElement("div");
     projectDiv.classList.add("card");
+    projectDiv.classList.add("hover-expand");
     let projectImage = document.createElement("img");
     projectImage.src = project.image;
     projectImage.classList.add("card-img-top");
@@ -100,17 +101,17 @@ function displayProjects(){
     projectDescription.innerHTML = project.description;
     projectDescription.classList.add("card-text");
     projectDiv.appendChild(projectDescription);
-    let projectLinks = document.createElement("div");
+    let projectLinks = document.createElement("section");
     projectLinks.classList.add("projectLinks");
     let projectLink = document.createElement("a");
     projectLink.href = project.link;
     projectLink.innerHTML = "View";
-    projectLink.classList.add("projectLink");
+    projectLink.classList.add("card-link");
     projectLinks.appendChild(projectLink);
     let githubLink = document.createElement("a");
     githubLink.href = project.githubLink;
     githubLink.innerHTML = "Github";
-    githubLink.classList.add("projectLink");
+    githubLink.classList.add("card-link");
     projectLinks.appendChild(githubLink);
     projectDiv.appendChild(projectLinks);
     projects.appendChild(projectDiv);
@@ -150,7 +151,7 @@ setInterval(()=>{
       window.open(response.postLink, "_blank");
     });
   });
-}, 10000);
+}, 12000);
 
 
 //quotes
@@ -171,4 +172,4 @@ setInterval(()=>{
     });
   });
 
-}, 10000);
+}, 20000);
