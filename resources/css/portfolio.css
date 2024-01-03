@@ -20,14 +20,14 @@
   /* Add a black background color to the top navigation */
   .topnav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: fixed;
     background-color: rgba(0,0,0,1);
-    overflow: hidden;
-    border-top: 10px solid hsla(0, 0%, 0%, 0.0);
-    top: 6rem;
+    top: 13rem;
     right: 2rem;
-    width: 200px;
+    width: 94%;
+    height: 4.5em;
+    font-size: small;
     transition: all 0.5s ease-in-out;
   }
   .nav_icon{
@@ -74,7 +74,19 @@
   }
 
   .main{
-    margin: 0 20px auto;
+    position: fixed;
+    top: 17em;
+    width: 94%;
+    height: 670px;
+    left: 3%;
+    right: 2%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0442c9;
   }
  
   #projects_div{
@@ -117,16 +129,16 @@
 
 
 .text_div{
-  margin-top: 4px;
-  width: 100%;
   background-color: rgba(0,0,0,0.3);
+  width: 45em;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 5em;
   align-items: center;
-  min-width: 100%;
+  transition: all 0.5s ease-in-out;
 }
 .hover-expand:hover{
   background-color: rgba(12, 12, 12, 0.8);
@@ -164,14 +176,12 @@ a:hover{
   
 }
 .text_div div .stat{
-  width: 100%;
-  height: 200px;
-  border-radius: 10px;
-  
+  max-width: max-content;
 }
 .skills-div{
   margin: auto;
   width: 80%;
+  max-width: 40em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -188,8 +198,13 @@ a:hover{
 .hidden{
   width: 0;
 }
-.none{
-  display: none;
+.small{
+  transform: scale(0);
+  transition: all 0.5s ease-in-out;
+}
+.large{
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
 }
 .flash{
   background-color: rgba(256,256,256,1);
@@ -236,17 +251,6 @@ a:hover{
   margin: 0px;
   padding: 0px;
 }
-
-.cursor{
-  color: #0554ff;
-  position: fixed;
-}
-.shake{
-  transform: scale(1.5);
-  transition: all 1s ease-in-out;
-  animation: shake 1s ease-in-out;
-}
-
 @media screen and (min-width: 200px) and (max-width: 420px) {
    /* Majority of mobile devices*/
    body{

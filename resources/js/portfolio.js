@@ -29,6 +29,13 @@ function flashContacts(){
 }
 
 function change(id){
+  let removeElement = async (element)=>{
+    if(element.classList.contains("small") && element.style.display != "none"){
+      setTimeout(()=>{
+        element.style.display = "none";
+      }, 500);
+    }
+  }
   var activeSpans = document.getElementsByClassName("active");
   for (i in activeSpans){
     try{
@@ -39,15 +46,31 @@ function change(id){
   document.getElementById(id).classList.add("active");
 
   var activeDivs = document.getElementsByClassName("text_div");
-  for (i in activeDivs){
-    try{
-      activeDivs[i].classList.add("none");
-      if (activeDivs[i].id == (id+"_div")){
-        activeDivs[i].classList.remove("none");
+
+  let changeElements = new Promise((resolve, reject)=>{
+    for (i in activeDivs){
+      try{
+        activeDivs[i].classList.add("small");
+        activeDivs[i].classList.remove("large");
+        if (activeDivs[i].id == (id+"_div")){
+          activeDivs[i].classList.remove("small");
+          activeDivs[i].classList.add("large");
+        }
       }
+      catch(err){
+        reject(err);
+      }
+      resolve();
     }
-    catch(err){}
-  }
+  });
+  changeElements.then(()=>{
+    for (i in activeDivs){
+      try{
+        removeElement(activeDivs[i]);
+      }
+      catch(err){}
+    }
+  });
 }
 
 window.onload = ()=>{
